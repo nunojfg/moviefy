@@ -11,6 +11,7 @@ import RealmSwift
 import SDWebImageSwiftUI
 
 struct MovieDetails : View {
+    @ObservedObject var networkManager = NetworkManager()
     @State private var isFavorite: Bool = false
     var movie: Movie
     
@@ -25,6 +26,8 @@ struct MovieDetails : View {
                 }
                 Spacer()
                 Text(movie.overview).lineLimit(nil)
+                Spacer()
+                HorizontalVideosView(movie: movie)
                 Spacer()
                 HorizontalMoviesListView(movie: movie)
             }

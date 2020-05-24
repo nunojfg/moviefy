@@ -10,12 +10,14 @@ import Foundation
 import Combine
 
 let BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
+let BASE_VIDEO_IMAGE_URL = "https://img.youtube.com/vi/%@/default.jpg"
 
 class NetworkManager: ObservableObject {
 	@Published var movies = MovieList(results: [])
     @Published var tvShows = MovieList(results: [])
     @Published var recommendations = MovieList(results: [])
     @Published var moviesSearch = MovieList(results: [])
+    @Published var videoList = VideoList(results: [])
 	@Published var loading = false
 	private let apiKey = "6f46e665d08d9351e05b677bd8dc4515"
     private var session: URLSession {
@@ -132,8 +134,47 @@ class NetworkManager: ObservableObject {
             do {
                 let movies = try JSONDecoder().decode(MovieList.self, from: data)
                 DispatchQueue.main.async {
-                    self.recommendations = movies
+                    self.recommendations.results = movies.results.compactMap { movieParsed -> Movie? in
+                        var movieResult = movieParsed
+                        movieResult.media_type = movie.media_type
+                        return movieResult
+                    }
+                }
+            }
+            catch {
+                DispatchQueue.main.async {
                     self.loading = false
+                }
+            }
+            
+        }.resume()
+    }
+    
+    public func loadVideos(movie: Movie) {
+        
+        let videosPath = movie.media_type == "movie" ? "/3/movie/\(movie.id)/videos" : "/3/tv/\(movie.id)/videos"
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.themoviedb.org"
+        urlComponents.path = videosPath
+        urlComponents.queryItems = [
+           URLQueryItem(name: "api_key", value: apiKey),
+           URLQueryItem(name: "sort_by", value: "popularity.desc")
+        ]
+        
+        guard let url = urlComponents.url else { return }
+        session.dataTask(with: url){ (data, _, _) in
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    self.loading = false
+                }
+                return
+            }
+            do {
+                let videos = try JSONDecoder().decode(VideoList.self, from: data)
+                DispatchQueue.main.async {
+                    self.videoList = videos
                 }
             }
             catch {

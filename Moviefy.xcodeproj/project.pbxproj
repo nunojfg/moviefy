@@ -37,6 +37,9 @@
 		855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */; };
 		8560236D2426C98F00F028DA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8560236C2426C98F00F028DA /* SearchBar.swift */; };
 		85643AAE2438947600B94BC1 /* AnyGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85643AAD2438947600B94BC1 /* AnyGestureRecognizer.swift */; };
+		8564F1B9247A8F930080D923 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1B8247A8F930080D923 /* VideoList.swift */; };
+		8564F1BB247A8FAF0080D923 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BA247A8FAF0080D923 /* Video.swift */; };
+		8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */; };
 		856DF94A2478726300347BE9 /* HorizontalMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DF9492478726300347BE9 /* HorizontalMoviesView.swift */; };
 		85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85BEAF332441CBE500FA78DC /* RealmSwift */; };
 /* End PBXBuildFile section */
@@ -72,6 +75,9 @@
 		855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapViewRepresentable.swift; sourceTree = "<group>"; };
 		8560236C2426C98F00F028DA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		85643AAD2438947600B94BC1 /* AnyGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyGestureRecognizer.swift; sourceTree = "<group>"; };
+		8564F1B8247A8F930080D923 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
+		8564F1BA247A8FAF0080D923 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalVideosView.swift; sourceTree = "<group>"; };
 		856DF9492478726300347BE9 /* HorizontalMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMoviesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,8 @@
 			children = (
 				44E5563022D15F3F0000B95D /* Movie.swift */,
 				44E5563222D1602C0000B95D /* MovieList.swift */,
+				8564F1BA247A8FAF0080D923 /* Video.swift */,
+				8564F1B8247A8F930080D923 /* VideoList.swift */,
 				855B1EE0242F61BE001F8F8B /* About.swift */,
 			);
 			path = Model;
@@ -170,6 +178,7 @@
 				855D41DF2439FB0E000BAE61 /* TabBarController.swift */,
 				855D41DD2439F738000BAE61 /* UITabView.swift */,
 				856DF9492478726300347BE9 /* HorizontalMoviesView.swift */,
+				8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -284,10 +293,12 @@
 				855B5A342427DB2A0093BB69 /* DiscoverView.swift in Sources */,
 				855B1EE5242F6235001F8F8B /* View+Extension.swift in Sources */,
 				44E5563522D1605D0000B95D /* NetworkManager.swift in Sources */,
+				8564F1BB247A8FAF0080D923 /* Video.swift in Sources */,
 				44E5561C22D15E670000B95D /* AppDelegate.swift in Sources */,
 				44E5561E22D15E670000B95D /* SceneDelegate.swift in Sources */,
 				855B857E24390CBF0002BCA2 /* FavoriteMovieResults.swift in Sources */,
 				44E5563C22D179BA0000B95D /* MovieDetails.swift in Sources */,
+				8564F1B9247A8F930080D923 /* VideoList.swift in Sources */,
 				855B1EE3242F61F1001F8F8B /* SectionCardView.swift in Sources */,
 				85643AAE2438947600B94BC1 /* AnyGestureRecognizer.swift in Sources */,
 				8560236D2426C98F00F028DA /* SearchBar.swift in Sources */,
@@ -300,6 +311,7 @@
 				855B858024390D8C0002BCA2 /* FavoritesView.swift in Sources */,
 				855B1EE1242F61BE001F8F8B /* About.swift in Sources */,
 				44E5562022D15E670000B95D /* ContentView.swift in Sources */,
+				8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */,
 				855D41DE2439F738000BAE61 /* UITabView.swift in Sources */,
 				855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */,
 				855D41DC2439E5F0000BAE61 /* ShareSheet.swift in Sources */,
