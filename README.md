@@ -1,1 +1,3 @@
 # moviefy
+
+xcodebuild -resolvePackageDependencies
