@@ -28,7 +28,6 @@
 		855B857C243907C00002BCA2 /* FavoriteMovieRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B857B243907C00002BCA2 /* FavoriteMovieRecord.swift */; };
 		855B857E24390CBF0002BCA2 /* FavoriteMovieResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B857D24390CBF0002BCA2 /* FavoriteMovieResults.swift */; };
 		855B858024390D8C0002BCA2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B857F24390D8C0002BCA2 /* FavoritesView.swift */; };
-		855C1ACD2479F11400CD8960 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 855C1ACC2479F11400CD8960 /* WaterfallGrid */; };
 		855C1AD02479F6D900CD8960 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */; };
 		855D41DC2439E5F0000BAE61 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DB2439E5F0000BAE61 /* ShareSheet.swift */; };
 		855D41DE2439F738000BAE61 /* UITabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DD2439F738000BAE61 /* UITabView.swift */; };
@@ -87,7 +86,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				855C1AD02479F6D900CD8960 /* SDWebImageSwiftUI in Frameworks */,
-				855C1ACD2479F11400CD8960 /* WaterfallGrid in Frameworks */,
 				85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +223,6 @@
 			name = Moviefy;
 			packageProductDependencies = (
 				85BEAF332441CBE500FA78DC /* RealmSwift */,
-				855C1ACC2479F11400CD8960 /* WaterfallGrid */,
 				855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */,
 			);
 			productName = Swiftui_movie;
@@ -258,7 +255,6 @@
 			mainGroup = 44E5560F22D15E670000B95D;
 			packageReferences = (
 				85BEAF2D2441CA6200FA78DC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				855C1ACB2479F11400CD8960 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
 				855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 44E5561922D15E670000B95D /* Products */;
@@ -453,7 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C8ECT792GJ;
 				ENABLE_PREVIEWS = YES;
@@ -465,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.motionblink.moviefy;
 				PRODUCT_NAME = Moviefy;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -474,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C8ECT792GJ;
 				ENABLE_PREVIEWS = YES;
@@ -486,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.motionblink.moviefy;
 				PRODUCT_NAME = Moviefy;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -514,14 +510,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		855C1ACB2479F11400CD8960 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
-			};
-		};
 		855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
@@ -541,11 +529,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		855C1ACC2479F11400CD8960 /* WaterfallGrid */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 855C1ACB2479F11400CD8960 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
-			productName = WaterfallGrid;
-		};
 		855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
