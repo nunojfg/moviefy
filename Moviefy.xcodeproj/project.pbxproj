@@ -39,6 +39,7 @@
 		8564F1B9247A8F930080D923 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1B8247A8F930080D923 /* VideoList.swift */; };
 		8564F1BB247A8FAF0080D923 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BA247A8FAF0080D923 /* Video.swift */; };
 		8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */; };
+		856724612483BAC7000E78D2 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */; };
 		856DF94A2478726300347BE9 /* HorizontalMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DF9492478726300347BE9 /* HorizontalMoviesView.swift */; };
 		85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85BEAF332441CBE500FA78DC /* RealmSwift */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 			files = (
 				855C1AD02479F6D900CD8960 /* SDWebImageSwiftUI in Frameworks */,
 				85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */,
+				856724612483BAC7000E78D2 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +226,7 @@
 			packageProductDependencies = (
 				85BEAF332441CBE500FA78DC /* RealmSwift */,
 				855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */,
+				856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */,
 			);
 			productName = Swiftui_movie;
 			productReference = 44E5561822D15E670000B95D /* Moviefy.app */;
@@ -256,6 +259,7 @@
 			packageReferences = (
 				85BEAF2D2441CA6200FA78DC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
 			);
 			productRefGroup = 44E5561922D15E670000B95D /* Products */;
 			projectDirPath = "";
@@ -518,6 +522,14 @@
 				minimumVersion = 1.4.0;
 			};
 		};
+		8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
 		85BEAF2D2441CA6200FA78DC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa";
@@ -533,6 +545,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
 		};
 		85BEAF332441CBE500FA78DC /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;

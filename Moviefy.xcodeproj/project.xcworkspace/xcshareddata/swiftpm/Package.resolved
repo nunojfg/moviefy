@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/realm/realm-cocoa",
         "state": {
           "branch": null,
-          "revision": "07734d6ee4b49b5656c51dab51c20a2d59b9de45",
-          "version": "4.4.0"
+          "revision": "fa43b8e2909334c79f233ce472332c136ca108da",
+          "version": "4.4.1"
         }
       },
       {
@@ -35,6 +35,15 @@
           "branch": null,
           "revision": "1ed96d9b08fa18694621e0b1de182fbf032121bc",
           "version": "1.4.0"
+        }
+      },
+      {
+        "package": "SwiftUIPullToRefresh",
+        "repositoryURL": "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git",
+        "state": {
+          "branch": null,
+          "revision": "20d4652902625a2a3563e57c06368a95be73df18",
+          "version": "1.0.6"
         }
       }
     ]
