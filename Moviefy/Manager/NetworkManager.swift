@@ -28,10 +28,26 @@ class NetworkManager: ObservableObject {
         let session = URLSession.init(configuration: config)
         return session
     }
+    private var disposables = Set<AnyCancellable>()
     
 	init() {
         loading = true
         loadData()
+    }
+    
+    public func fetchMovies(fetcher: APIRequest<APIResponseList<Movie>>) {
+        loading = true
+        APIClient().send(fetcher).sink(receiveCompletion: { (completion) in
+            switch completion {
+            case .failure:
+                self.loading = false
+            case .finished:
+                break
+            }
+        }, receiveValue: { (response) in
+            self.loading = false
+            self.movies.results = response.results
+        }).store(in: &disposables)
     }
     
 	public func loadData() {
@@ -41,7 +57,10 @@ class NetworkManager: ObservableObject {
         urlComponents.path = "/3/discover/movie"
         urlComponents.queryItems = [
            URLQueryItem(name: "api_key", value: apiKey),
-           URLQueryItem(name: "sort_by", value: "popularity.desc")
+           URLQueryItem(name: "sort_by", value: "popularity.desc"),
+           URLQueryItem(name: "certification_country", value: "US"),
+            URLQueryItem(name: "certification.lte", value: "g"),
+            URLQueryItem(name: "include_adult", value: "false")
         ]
         
         guard let url = urlComponents.url else { return }

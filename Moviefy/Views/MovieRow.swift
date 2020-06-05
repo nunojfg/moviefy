@@ -25,33 +25,38 @@ struct MovieRow : View {
 					Spacer()
 				}
 				HStack {
+                    ZStack {
+                        Circle()
+                            .fill(Color.clear)
+                            .frame(width: 40, height: 40)
+                            .overlay (
+                                Circle()
+                                    .trim(from: 0, to: CGFloat(movie.vote_average * 0.1))
+                                    .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                                    .fill(movie.vote_average <= 3 ? Color.red : (movie.vote_average < 7 ? Color.orange : Color.green) )
+                        )
+                        Text(String(format: "%.1f", movie.vote_average)).fontWeight(.semibold)
+                    }
+                    Spacer()
                     Text(movie.release_date).foregroundColor(.gray).bold()
-					Spacer()
-                    Text("Rate: \(movie.vote_average.format())").bold()
-				}
-				HStack {
-                    Text("Vote count: \(movie.vote_count)")
-						.foregroundColor(.gray)
-						.lineLimit(nil)
-					Spacer()
-				}
-				HStack {
-                    Text("Popularity: \(movie.popularity.format())")
-						.foregroundColor(.gray)
-						.lineLimit(nil)
-					Spacer()
-				}
-				Spacer()
+                    Spacer()
+                }
+                Spacer()
 			}
 		}.frame(height: 130)
 	}
     
     func containedView() -> AnyView {
-       
+        
         if let posterPath = movie.poster_path {
             return AnyView(WebImage(url: URL(string:  "\(BASE_IMAGE_URL)\(posterPath)")!)
                 .resizable()
-                .indicator(.activity)
+                .placeholder(content: {
+                    Text(movie.title)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                })
                 .frame(width: 90, height: 120)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
@@ -59,7 +64,11 @@ struct MovieRow : View {
                 .shadow(radius: 5))
         }
         
-        return AnyView(Spacer())
+        return AnyView(Text(movie.title)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.white)
+        )
     }
 }
 
