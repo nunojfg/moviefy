@@ -20,6 +20,14 @@
 		44E5563C22D179BA0000B95D /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5563B22D179BA0000B95D /* MovieDetails.swift */; };
 		850D5A12248A6FE300016B1F /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A11248A6FE300016B1F /* ShimmerView.swift */; };
 		850D5A14248AAE8400016B1F /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A13248AAE8400016B1F /* VideoListViewModel.swift */; };
+		850D5A4F248E2ACC00016B1F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A45248E2ACC00016B1F /* APIError.swift */; };
+		850D5A50248E2ACC00016B1F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A46248E2ACC00016B1F /* APIClient.swift */; };
+		850D5A51248E2ACC00016B1F /* HTTPParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A48248E2ACC00016B1F /* HTTPParameter.swift */; };
+		850D5A52248E2ACC00016B1F /* APIEndpoints+TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4A248E2ACC00016B1F /* APIEndpoints+TVShows.swift */; };
+		850D5A53248E2ACC00016B1F /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4B248E2ACC00016B1F /* APIEndpoints.swift */; };
+		850D5A54248E2ACC00016B1F /* APIEndpoints+Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4C248E2ACC00016B1F /* APIEndpoints+Movies.swift */; };
+		850D5A55248E2ACC00016B1F /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4D248E2ACC00016B1F /* APIResponse.swift */; };
+		850D5A56248E2ACC00016B1F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4E248E2ACC00016B1F /* APIRequest.swift */; };
 		855B1EDF242F617D001F8F8B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EDE242F617D001F8F8B /* AboutView.swift */; };
 		855B1EE1242F61BE001F8F8B /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EE0242F61BE001F8F8B /* About.swift */; };
 		855B1EE3242F61F1001F8F8B /* SectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EE2242F61F1001F8F8B /* SectionCardView.swift */; };
@@ -68,6 +76,14 @@
 		44E5563B22D179BA0000B95D /* MovieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		850D5A11248A6FE300016B1F /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		850D5A13248AAE8400016B1F /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
+		850D5A45248E2ACC00016B1F /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		850D5A46248E2ACC00016B1F /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		850D5A48248E2ACC00016B1F /* HTTPParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPParameter.swift; sourceTree = "<group>"; };
+		850D5A4A248E2ACC00016B1F /* APIEndpoints+TVShows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIEndpoints+TVShows.swift"; sourceTree = "<group>"; };
+		850D5A4B248E2ACC00016B1F /* APIEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		850D5A4C248E2ACC00016B1F /* APIEndpoints+Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "APIEndpoints+Movies.swift"; sourceTree = "<group>"; };
+		850D5A4D248E2ACC00016B1F /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		850D5A4E248E2ACC00016B1F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		855B1EDE242F617D001F8F8B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		855B1EE0242F61BE001F8F8B /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		855B1EE2242F61F1001F8F8B /* SectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCardView.swift; sourceTree = "<group>"; };
@@ -149,6 +165,7 @@
 		44E5561A22D15E670000B95D /* Moviefy */ = {
 			isa = PBXGroup;
 			children = (
+				850D5A43248E2ACC00016B1F /* Services */,
 				85CE27E72488E6A100C2AB49 /* ViewModel */,
 				855B09F0243E7A0200A72D3C /* Manager */,
 				854C781624267CBE00BECFC2 /* Helpers */,
@@ -187,6 +204,45 @@
 				85CE27E52488E5F200C2AB49 /* Actor.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		850D5A43248E2ACC00016B1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				850D5A44248E2ACC00016B1F /* APIService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		850D5A44248E2ACC00016B1F /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				850D5A45248E2ACC00016B1F /* APIError.swift */,
+				850D5A46248E2ACC00016B1F /* APIClient.swift */,
+				850D5A47248E2ACC00016B1F /* Utils */,
+				850D5A49248E2ACC00016B1F /* Requests */,
+				850D5A4D248E2ACC00016B1F /* APIResponse.swift */,
+				850D5A4E248E2ACC00016B1F /* APIRequest.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		850D5A47248E2ACC00016B1F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				850D5A48248E2ACC00016B1F /* HTTPParameter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		850D5A49248E2ACC00016B1F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				850D5A4A248E2ACC00016B1F /* APIEndpoints+TVShows.swift */,
+				850D5A4B248E2ACC00016B1F /* APIEndpoints.swift */,
+				850D5A4C248E2ACC00016B1F /* APIEndpoints+Movies.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		854C781624267CBE00BECFC2 /* Helpers */ = {
@@ -325,15 +381,18 @@
 				855B5A342427DB2A0093BB69 /* DiscoverView.swift in Sources */,
 				855B1EE5242F6235001F8F8B /* View+Extension.swift in Sources */,
 				44E5563522D1605D0000B95D /* NetworkManager.swift in Sources */,
+				850D5A55248E2ACC00016B1F /* APIResponse.swift in Sources */,
 				85CE27E22488E54600C2AB49 /* Episode.swift in Sources */,
 				85CE27E02488E52400C2AB49 /* Genre.swift in Sources */,
 				8564F1BB247A8FAF0080D923 /* Video.swift in Sources */,
 				44E5561C22D15E670000B95D /* AppDelegate.swift in Sources */,
 				44E5561E22D15E670000B95D /* SceneDelegate.swift in Sources */,
 				85CE27E42488E55F00C2AB49 /* TVSeason.swift in Sources */,
+				850D5A52248E2ACC00016B1F /* APIEndpoints+TVShows.swift in Sources */,
 				855B857E24390CBF0002BCA2 /* FavoriteMovieResults.swift in Sources */,
 				44E5563C22D179BA0000B95D /* MovieDetails.swift in Sources */,
 				85CE27EB2488E86400C2AB49 /* GenresMovieListViewModel.swift in Sources */,
+				850D5A53248E2ACC00016B1F /* APIEndpoints.swift in Sources */,
 				850D5A12248A6FE300016B1F /* ShimmerView.swift in Sources */,
 				8564F1B9247A8F930080D923 /* VideoList.swift in Sources */,
 				855B1EE3242F61F1001F8F8B /* SectionCardView.swift in Sources */,
@@ -347,16 +406,21 @@
 				856DF94A2478726300347BE9 /* HorizontalMoviesView.swift in Sources */,
 				855D41E02439FB0E000BAE61 /* TabBarController.swift in Sources */,
 				44E5563322D1602C0000B95D /* MovieList.swift in Sources */,
+				850D5A4F248E2ACC00016B1F /* APIError.swift in Sources */,
 				855B858024390D8C0002BCA2 /* FavoritesView.swift in Sources */,
 				855B1EE1242F61BE001F8F8B /* About.swift in Sources */,
 				44E5562022D15E670000B95D /* ContentView.swift in Sources */,
+				850D5A51248E2ACC00016B1F /* HTTPParameter.swift in Sources */,
 				85CE27E62488E5F200C2AB49 /* Actor.swift in Sources */,
 				8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */,
 				855D41DE2439F738000BAE61 /* UITabView.swift in Sources */,
 				855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */,
+				850D5A50248E2ACC00016B1F /* APIClient.swift in Sources */,
 				855D41DC2439E5F0000BAE61 /* ShareSheet.swift in Sources */,
 				855D50F92430A76B00903DFE /* Wrap.swift in Sources */,
 				855B857C243907C00002BCA2 /* FavoriteMovieRecord.swift in Sources */,
+				850D5A56248E2ACC00016B1F /* APIRequest.swift in Sources */,
+				850D5A54248E2ACC00016B1F /* APIEndpoints+Movies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
