@@ -15,7 +15,6 @@ struct AboutView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
                         Text(about.title)

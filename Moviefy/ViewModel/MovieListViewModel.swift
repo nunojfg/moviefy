@@ -25,8 +25,10 @@ class MovieListViewModel: ObservableObject {
     init(fetcher: APIRequest<APIResponseList<Movie>>) {
         self.fetchMovies(fetcher: fetcher)
     }
+    
+    init() {}
 
-    private func fetchMovies(fetcher: APIRequest<APIResponseList<Movie>>) {
+    public func fetchMovies(fetcher: APIRequest<APIResponseList<Movie>>) {
         self.state = .loading
         APIClient().send(fetcher).sink(receiveCompletion: { (completion) in
             switch completion {
@@ -38,7 +40,9 @@ class MovieListViewModel: ObservableObject {
             }
         }, receiveValue: { (response) in
             self.state = .data
-            self.movies = response.results
+            self.movies = response.results.filter {
+                $0.poster_path?.isEmpty == false
+            }
         })
             .store(in: &disposables)
     }

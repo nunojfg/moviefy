@@ -13,9 +13,20 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                AboutView()
+                List {
+                    NavigationLink(destination: AboutView()){
+                        Text("About")
+                    }
+                    NavigationLink(destination: AboutView()) {
+                        Text("Themes")
+                    }
+                    NavigationLink(destination: AboutView()) {
+                        Text("Privacy Policy")
+                    }
+                }
+                Spacer()
             }
-            .navigationBarTitle("About")
+            .navigationBarTitle("Settings")
         }
     }
 }

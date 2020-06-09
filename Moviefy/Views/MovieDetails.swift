@@ -41,7 +41,7 @@ struct MovieDetails : View {
                     Spacer()
                 }
                 Spacer()
-                Text(movie.overview).padding(.leading, 16).lineLimit(nil)
+                Text(movie.overview).padding(.leading, 16).lineLimit(nil).fixedSize(horizontal: false, vertical: true)
                 Spacer()
                 HorizontalVideoListView(viewModel: VideoListViewModel(fetcher: APIEndpoints.videos(for: movie)), listName: "Videos", circular: true)
                 HorizontalMoviesListView(viewModel: MovieListViewModel(fetcher: APIEndpoints.recommendationsMovies(movieId: movie.id)), listName: "Recommendations")

@@ -30,8 +30,4 @@ extension APIEndpoints {
                 "query": text
             ]
     )}
-    static func videos(for movie: Movie) -> APIRequest<APIResponseList<Video>> {
-        let urlPath = movie.media_type == "movie" ? "/movie/\(movie.id)/videos" : "/video/\(movie.id)/videos"
-        return APIRequest(path: urlPath)
-    }
 }

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import SwiftUIPullToRefresh
+import Network
 
 struct DiscoverView: View {
     @State private var searchTerm: String = ""
@@ -17,11 +18,10 @@ struct DiscoverView: View {
     @State private var selectedMediaType = "Movie"
     @State private var showRefreshView = false
     var mediaTypes = ["Movie", "TV"]
+    let networkMonitor = NetworkMonitor()
     
     init() {
-        //networkManager.fetchMovies(fetcher: APIEndpoints.topRatedMovies)
-        //networkManager.loadData()
-        //networkManager.loadDataTVShows()
+        networkMonitor.start()
     }
     
     var body: some View {
