@@ -25,6 +25,8 @@ struct SettingsView: View {
                     }
                 }
                 Spacer()
+                Text("Version: \(UIApplication.shared.versionBuild)")
+                Spacer()
             }
             .navigationBarTitle("Settings")
         }

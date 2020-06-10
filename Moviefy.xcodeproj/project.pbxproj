@@ -53,6 +53,7 @@
 		8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */; };
 		856724612483BAC7000E78D2 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */; };
 		856DF94A2478726300347BE9 /* HorizontalMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DF9492478726300347BE9 /* HorizontalMoviesView.swift */; };
+		85ADB5E12490E575006DB02A /* UIApplication+BuildVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADB5E02490E575006DB02A /* UIApplication+BuildVersion.swift */; };
 		85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85BEAF332441CBE500FA78DC /* RealmSwift */; };
 		85CE27E02488E52400C2AB49 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE27DF2488E52400C2AB49 /* Genre.swift */; };
 		85CE27E22488E54600C2AB49 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CE27E12488E54600C2AB49 /* Episode.swift */; };
@@ -109,6 +110,7 @@
 		8564F1BA247A8FAF0080D923 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalVideosView.swift; sourceTree = "<group>"; };
 		856DF9492478726300347BE9 /* HorizontalMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalMoviesView.swift; sourceTree = "<group>"; };
+		85ADB5E02490E575006DB02A /* UIApplication+BuildVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+BuildVersion.swift"; sourceTree = "<group>"; };
 		85CE27DF2488E52400C2AB49 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		85CE27E12488E54600C2AB49 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		85CE27E32488E55F00C2AB49 /* TVSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSeason.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				856DF9492478726300347BE9 /* HorizontalMoviesView.swift */,
 				8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */,
 				850D5A57248EA62F00016B1F /* NetworkMonitor.swift */,
+				85ADB5E02490E575006DB02A /* UIApplication+BuildVersion.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				8564F1BB247A8FAF0080D923 /* Video.swift in Sources */,
 				44E5561C22D15E670000B95D /* AppDelegate.swift in Sources */,
 				44E5561E22D15E670000B95D /* SceneDelegate.swift in Sources */,
+				85ADB5E12490E575006DB02A /* UIApplication+BuildVersion.swift in Sources */,
 				85CE27E42488E55F00C2AB49 /* TVSeason.swift in Sources */,
 				850D5A52248E2ACC00016B1F /* APIEndpoints+TVShows.swift in Sources */,
 				855B857E24390CBF0002BCA2 /* FavoriteMovieResults.swift in Sources */,
