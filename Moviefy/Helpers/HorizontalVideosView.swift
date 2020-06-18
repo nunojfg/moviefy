@@ -8,8 +8,11 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import AVKit
+import XCDYouTubeKit
 
 struct HorizontalVideoListView: View {
+    @Environment(\.viewController) private var viewControllerHolder: UIViewController?
     @ObservedObject var viewModel: VideoListViewModel
     var listName: String
     var circular: Bool
@@ -36,7 +39,7 @@ struct HorizontalVideoListView: View {
                         HStack(spacing: 20) {
                             ForEach(viewModel.videos) { video in
                                 Button(action: {
-                                    UIApplication.shared.open(URL(string: "https://www.youtube.com/watch?v=\(video.key)")!)
+                                    self.playVideo(videoIdentifier: video.key)
                                 }){
                                     self.containedView(video: video)
                                 }.buttonStyle(PlainButtonStyle())
@@ -91,6 +94,20 @@ struct HorizontalVideoListView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
         )
+    }
+    
+    func playVideo(videoIdentifier: String?) {
+        let playerViewController = AVPlayerViewController()
+        self.viewControllerHolder?.present(playerViewController, animated: true, completion:nil)
+
+        XCDYouTubeClient.default().getVideoWithIdentifier(videoIdentifier) { [weak playerViewController] (video: XCDYouTubeVideo?, error: Error?) in
+            if let streamURLs = video?.streamURLs, let streamURL = (streamURLs[XCDYouTubeVideoQualityHTTPLiveStreaming] ?? streamURLs[YouTubeVideoQuality.hd720] ?? streamURLs[YouTubeVideoQuality.medium360] ?? streamURLs[YouTubeVideoQuality.small240]) {
+                playerViewController?.player = AVPlayer(url: streamURL)
+                playerViewController?.player?.play()
+            } else {
+                self.viewControllerHolder?.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
 

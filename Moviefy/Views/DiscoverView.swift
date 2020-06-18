@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import SwiftUIPullToRefresh
 import Network
 
 struct DiscoverView: View {

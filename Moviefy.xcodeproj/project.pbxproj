@@ -30,6 +30,8 @@
 		850D5A56248E2ACC00016B1F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A4E248E2ACC00016B1F /* APIRequest.swift */; };
 		850D5A58248EA62F00016B1F /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A57248EA62F00016B1F /* NetworkMonitor.swift */; };
 		850D5A5A248EAE5400016B1F /* APIEndpoints+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850D5A59248EAE5400016B1F /* APIEndpoints+Common.swift */; };
+		855A5C412497D584009445F2 /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 855A5C402497D584009445F2 /* XCDYouTubeKit */; };
+		855A5C4B249B7BEF009445F2 /* YouTubeVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A5C4A249B7BEF009445F2 /* YouTubeVideo.swift */; };
 		855B1EDF242F617D001F8F8B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EDE242F617D001F8F8B /* AboutView.swift */; };
 		855B1EE1242F61BE001F8F8B /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EE0242F61BE001F8F8B /* About.swift */; };
 		855B1EE3242F61F1001F8F8B /* SectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B1EE2242F61F1001F8F8B /* SectionCardView.swift */; };
@@ -51,7 +53,6 @@
 		8564F1B9247A8F930080D923 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1B8247A8F930080D923 /* VideoList.swift */; };
 		8564F1BB247A8FAF0080D923 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BA247A8FAF0080D923 /* Video.swift */; };
 		8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */; };
-		856724612483BAC7000E78D2 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */; };
 		856DF94A2478726300347BE9 /* HorizontalMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DF9492478726300347BE9 /* HorizontalMoviesView.swift */; };
 		85ADB5E12490E575006DB02A /* UIApplication+BuildVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADB5E02490E575006DB02A /* UIApplication+BuildVersion.swift */; };
 		85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85BEAF332441CBE500FA78DC /* RealmSwift */; };
@@ -89,6 +90,7 @@
 		850D5A4E248E2ACC00016B1F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		850D5A57248EA62F00016B1F /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		850D5A59248EAE5400016B1F /* APIEndpoints+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoints+Common.swift"; sourceTree = "<group>"; };
+		855A5C4A249B7BEF009445F2 /* YouTubeVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeVideo.swift; sourceTree = "<group>"; };
 		855B1EDE242F617D001F8F8B /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		855B1EE0242F61BE001F8F8B /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		855B1EE2242F61F1001F8F8B /* SectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCardView.swift; sourceTree = "<group>"; };
@@ -125,8 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				855C1AD02479F6D900CD8960 /* SDWebImageSwiftUI in Frameworks */,
+				855A5C412497D584009445F2 /* XCDYouTubeKit in Frameworks */,
 				85BEAF342441CBE500FA78DC /* RealmSwift in Frameworks */,
-				856724612483BAC7000E78D2 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 				44E5561A22D15E670000B95D /* Moviefy */,
 				44E5561922D15E670000B95D /* Products */,
 				85BEAF302441CBE000FA78DC /* Frameworks */,
+				855A5C52249BB0E8009445F2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,6 +269,7 @@
 				8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */,
 				850D5A57248EA62F00016B1F /* NetworkMonitor.swift */,
 				85ADB5E02490E575006DB02A /* UIApplication+BuildVersion.swift */,
+				855A5C4A249B7BEF009445F2 /* YouTubeVideo.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -323,7 +327,7 @@
 			packageProductDependencies = (
 				85BEAF332441CBE500FA78DC /* RealmSwift */,
 				855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */,
-				856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */,
+				855A5C402497D584009445F2 /* XCDYouTubeKit */,
 			);
 			productName = Swiftui_movie;
 			productReference = 44E5561822D15E670000B95D /* Moviefy.app */;
@@ -356,7 +360,7 @@
 			packageReferences = (
 				85BEAF2D2441CA6200FA78DC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+				855A5C3F2497D584009445F2 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
 			);
 			productRefGroup = 44E5561922D15E670000B95D /* Products */;
 			projectDirPath = "";
@@ -419,6 +423,7 @@
 				44E5563322D1602C0000B95D /* MovieList.swift in Sources */,
 				850D5A4F248E2ACC00016B1F /* APIError.swift in Sources */,
 				855B858024390D8C0002BCA2 /* FavoritesView.swift in Sources */,
+				855A5C4B249B7BEF009445F2 /* YouTubeVideo.swift in Sources */,
 				855B1EE1242F61BE001F8F8B /* About.swift in Sources */,
 				44E5562022D15E670000B95D /* ContentView.swift in Sources */,
 				850D5A51248E2ACC00016B1F /* HTTPParameter.swift in Sources */,
@@ -630,20 +635,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		855A5C3F2497D584009445F2 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.14.0;
+			};
+		};
 		855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.4.0;
-			};
-		};
-		8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/phuhuynh2411/SwiftUI-PullToRefresh.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.6;
 			};
 		};
 		85BEAF2D2441CA6200FA78DC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
@@ -657,15 +662,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		855A5C402497D584009445F2 /* XCDYouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 855A5C3F2497D584009445F2 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
+			productName = XCDYouTubeKit;
+		};
 		855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 855C1ACE2479F6D900CD8960 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
-		};
-		856724602483BAC7000E78D2 /* SwiftUIPullToRefresh */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8567245F2483BAC7000E78D2 /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
-			productName = SwiftUIPullToRefresh;
 		};
 		85BEAF332441CBE500FA78DC /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
