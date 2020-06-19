@@ -17,11 +17,11 @@ struct SettingsView: View {
                     NavigationLink(destination: AboutView()){
                         Text("About")
                     }
-                    NavigationLink(destination: AboutView()) {
+                    NavigationLink(destination: ThemesView()) {
                         Text("Themes")
                     }
-                    NavigationLink(destination: AboutView()) {
-                        Text("Privacy Policy")
+                    NavigationLink(destination: MobileDataUsageView()) {
+                        Text("Mobile Data Usage")
                     }
                 }
                 Spacer()

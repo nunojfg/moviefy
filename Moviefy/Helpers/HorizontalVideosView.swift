@@ -45,7 +45,7 @@ struct HorizontalVideoListView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }
                         }
-                        .frame(height: circular ? 155 : 245)
+                        .frame(height: circular ? 105 : 150)
                         .padding([.leading, .trailing], 10)
                     }
                 }
@@ -68,8 +68,8 @@ struct HorizontalVideoListView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(.white)
                     })
-                    .frame(width: 150, height: 150)
-                    .cornerRadius(150)
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(100)
                     .overlay(Circle().stroke(Color.orange, lineWidth: 2)))
             }
             
@@ -81,7 +81,7 @@ struct HorizontalVideoListView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                 })
-                .frame(width: 90, height: 120)
+                .frame(width: 100, height: 150)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.orange, lineWidth: 2))
