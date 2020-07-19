@@ -11,7 +11,6 @@ import RealmSwift
 import SDWebImageSwiftUI
 
 struct MovieDetails : View {
-    @ObservedObject var networkManager = NetworkManager()
     @State private var isFavorite: Bool = false
     var movie: Movie
     

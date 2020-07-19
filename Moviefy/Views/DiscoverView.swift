@@ -11,7 +11,6 @@ import Network
 
 struct DiscoverView: View {
     @State private var searchTerm: String = ""
-    @ObservedObject var networkManager = NetworkManager()
     @ObservedObject var genresMovieListViewModel = GenresMovieListViewModel(endpoint: APIEndpoints.movieGenres)
     @ObservedObject var genresTVShowsListViewModel = GenresMovieListViewModel(endpoint: APIEndpoints.tvShowGenres)
     @State private var selectedMediaType = "Movie"

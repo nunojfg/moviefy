@@ -9,6 +9,9 @@
 import Foundation
 import Combine
 
+let BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
+let BASE_VIDEO_IMAGE_URL = "https://img.youtube.com/vi/%@/default.jpg"
+
 public class APIClient {
     private let publicKey: String
     private static let baseUrl: URL? = URL(string: "https://api.themoviedb.org/3/")

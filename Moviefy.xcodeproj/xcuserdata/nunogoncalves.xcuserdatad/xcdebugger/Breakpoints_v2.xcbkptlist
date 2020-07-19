@@ -18,38 +18,6 @@
             endingLineNumber = "115"
             landmarkName = "loadDataTVShows()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "854E3F3F-B54F-4545-8ADF-6FD4FDA5BE40 - 97dcf819916902c4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Moviefy.NetworkManager.loadDataTVShows() -&gt; ()"
-                  moduleName = "Moviefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nunogoncalves/Documents/moviefy/Moviefy/Manager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "854E3F3F-B54F-4545-8ADF-6FD4FDA5BE40 - 6ddc2363d6f2da3a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Moviefy.Movie) -&gt; Swift.Optional&lt;Moviefy.Movie&gt; in closure #2 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Moviefy.NetworkManager.loadDataTVShows() -&gt; ()"
-                  moduleName = "Moviefy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nunogoncalves/Documents/moviefy/Moviefy/Manager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

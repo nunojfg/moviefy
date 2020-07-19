@@ -17,12 +17,12 @@ struct SettingsView: View {
                     NavigationLink(destination: AboutView()){
                         Text("About")
                     }
-                    NavigationLink(destination: ThemesView()) {
-                        Text("Themes")
-                    }
-                    NavigationLink(destination: MobileDataUsageView()) {
-                        Text("Mobile Data Usage")
-                    }
+//                    NavigationLink(destination: ThemesView()) {
+//                        Text("Themes")
+//                    }
+//                    NavigationLink(destination: MobileDataUsageView()) {
+//                        Text("Mobile Data Usage")
+//                    }
                 }
                 Spacer()
                 Text("Version: \(UIApplication.shared.versionBuild)")
