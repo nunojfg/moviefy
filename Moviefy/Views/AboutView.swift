@@ -13,26 +13,24 @@ struct AboutView: View {
     let about: About = About.defaultAbout
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 32) {
-                        Text(about.title)
-                            .font(.body)
-                            .cardContained()
-                        
-                        ForEach(about.copyrights) { copy in
-                            VStack(alignment: .leading, spacing: 8) {
-                                SectionCardView(title: copy.title, subtitle: copy.license)
-                            }
+        ZStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 32) {
+                    Text(about.title)
+                        .font(.body)
+                        .cardContained()
+                    
+                    ForEach(about.copyrights) { copy in
+                        VStack(alignment: .leading, spacing: 8) {
+                            SectionCardView(title: copy.title, subtitle: copy.license)
                         }
                     }
-                    .padding(.all)
                 }
+                .padding(.all)
             }
-            .navigationBarTitle("About")
-            .background(Color(UIColor.secondarySystemBackground))
         }
+        .navigationBarTitle("About", displayMode: .large)
+        .padding()
+        .background(Color(UIColor.secondarySystemBackground))
     }
 }

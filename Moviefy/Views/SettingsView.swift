@@ -13,9 +13,22 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             VStack {
-                AboutView()
+                List {
+                    NavigationLink(destination: AboutView()){
+                        Text("About")
+                    }
+//                    NavigationLink(destination: ThemesView()) {
+//                        Text("Themes")
+//                    }
+//                    NavigationLink(destination: MobileDataUsageView()) {
+//                        Text("Mobile Data Usage")
+//                    }
+                }
+                Spacer()
+                Text("Version: \(UIApplication.shared.versionBuild)")
+                Spacer()
             }
-            .navigationBarTitle("About")
+            .navigationBarTitle("Settings")
         }
     }
 }

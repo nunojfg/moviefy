@@ -10,21 +10,31 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct HorizontalMoviesListView: View {
-    @ObservedObject var networkManager = NetworkManager()
+    @ObservedObject var viewModel: MovieListViewModel
+    var listName: String
+    var circular: Bool
     
-    init(movie: Movie) {
-        networkManager.loadRecommendations(movie: movie)
+    init(viewModel: MovieListViewModel, listName: String = "", circular: Bool = false)  {
+        self.viewModel = viewModel
+        self.listName = listName
+        self.circular = circular
     }
     
     var body: some View {
         Group {
-            if !networkManager.recommendations.results.isEmpty {
+            if viewModel.state == .loading {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Recommendations")
+                    ShimmerView().frame(height: 32)
+                    ShimmerView().frame(height: 245)
+                }.padding([.leading, .trailing], 10)
+            } else if !viewModel.movies.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(listName)
                         .font(.system(size: 24, weight: .bold))
+                        .padding(.leading, 16)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
-                            ForEach(networkManager.recommendations.results) { movie in
+                            ForEach(viewModel.movies) { movie in
                                 NavigationLink(destination: MovieDetails(movie: movie)){
                                     Group {
                                         self.containedView(movie: movie)
@@ -32,10 +42,12 @@ struct HorizontalMoviesListView: View {
                                 }.buttonStyle(PlainButtonStyle())
                             }
                         }
-                        .frame(height: 245)
+                        .frame(height: circular ? 105 : 150)
                         .padding([.leading, .trailing], 10)
                     }
                 }
+            } else {
+                Rectangle().fill(Color.clear)
             }
         }.transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.5)))
     }
@@ -43,16 +55,41 @@ struct HorizontalMoviesListView: View {
     func containedView(movie: Movie) -> AnyView {
         
         if let posterPath = movie.poster_path {
+            
+            if circular {
+                return AnyView(WebImage(url: URL(string: "\(BASE_IMAGE_URL)\(posterPath)")!)
+                    .resizable()
+                    .placeholder(content: {
+                        Text(movie.title)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                    })
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(100)
+                    .overlay(Circle().stroke(Color.orange, lineWidth: 2)))
+            }
+            
             return AnyView(WebImage(url: URL(string: "\(BASE_IMAGE_URL)\(posterPath)")!)
                 .resizable()
-                .indicator(.activity)
-                .frame(width: 150, height: 245)
+                .placeholder(content: {
+                    Text(movie.title)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                })
+                .frame(width: 100, height: 150)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.orange, lineWidth: 2))
                 .shadow(radius: 5))
         }
         
-        return AnyView(Spacer())
+        return AnyView(
+            Text(movie.title)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.white)
+        )
     }
 }

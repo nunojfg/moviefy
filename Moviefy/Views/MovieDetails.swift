@@ -11,7 +11,6 @@ import RealmSwift
 import SDWebImageSwiftUI
 
 struct MovieDetails : View {
-    @ObservedObject var networkManager = NetworkManager()
     @State private var isFavorite: Bool = false
     var movie: Movie
     
@@ -19,17 +18,32 @@ struct MovieDetails : View {
         VStack {
             ScrollView {
                 containedView()
+                HStack(alignment: .center, spacing: 60) {
+                    ZStack {
+                        Circle()
+                            .fill(Color.clear)
+                            .frame(width: 40, height: 40)
+                            .overlay (
+                                Circle()
+                                    .trim(from: 0, to: CGFloat(movie.vote_average * 0.1))
+                                    .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                                    .fill(movie.vote_average <= 3 ? Color.red : (movie.vote_average < 7 ? Color.orange : Color.green) )
+                        )
+                        Text(String(format: "%.1f", movie.vote_average)).fontWeight(.semibold)
+                    }
+                    Text(movie.release_date).foregroundColor(.gray).bold()
+                }
                 HStack {
                     Text("Description")
                         .font(.system(size: 24, weight: .bold))
+                        .padding(.leading, 16)
                     Spacer()
                 }
                 Spacer()
-                Text(movie.overview).lineLimit(nil)
+                Text(movie.overview).padding(.leading, 16).lineLimit(nil).fixedSize(horizontal: false, vertical: true)
                 Spacer()
-                HorizontalVideosView(movie: movie)
-                Spacer()
-                HorizontalMoviesListView(movie: movie)
+                HorizontalVideoListView(viewModel: VideoListViewModel(fetcher: APIEndpoints.videos(for: movie)), listName: "Videos", circular: true)
+                HorizontalMoviesListView(viewModel: MovieListViewModel(fetcher: APIEndpoints.recommendationsMovies(movieId: movie.id)), listName: "Recommendations")
             }
         }
         .navigationBarTitle(Text(movie.title), displayMode: .large)
@@ -65,15 +79,24 @@ struct MovieDetails : View {
         if let posterPath = movie.poster_path {
             return AnyView(WebImage(url: URL(string:"\(BASE_IMAGE_URL)\(posterPath)")!)
                 .resizable()
-                .indicator(.activity)
+                .placeholder(content: {
+                    Text(movie.title)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
+                })
                 .frame(width: UIScreen.main.bounds.height / 8 * 3, height: UIScreen.main.bounds.height / 2)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.orange, lineWidth: 2))
+                    .stroke(Color.orange, lineWidth: 2))
                 .shadow(radius: 10))
         }
         
-        return AnyView(Spacer())
+        return AnyView(Text(movie.title)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+            .foregroundColor(.white)
+        )
     }
     
     func favoriteButtonView() -> AnyView {

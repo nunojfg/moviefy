@@ -17,9 +17,9 @@ struct ContentView : View {
     var body: some View {
         UITabView([
             UITabView.Tab(view: DiscoverView(), title: "Discover", image: "play.fill"),
-            UITabView.Tab(view: SearchView(), title: "Search", image: "tv.fill"),
+            UITabView.Tab(view: SearchView(), title: "Search", image: "magnifyingglass.circle.fill"),
             UITabView.Tab(view: FavoritesView(), title: "Favorites", image: "star.fill"),
-            UITabView.Tab(view: AboutView(), title: "About", image: "person.fill")
+            UITabView.Tab(view: SettingsView(), title: "Settings", image: "line.horizontal.3.decrease.circle.fill")
         ])
     }
 }

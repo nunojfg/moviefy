@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "loadRecommendations(movie:)"
+            landmarkName = "loadDataTVShows()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
             endingLineNumber = "117"
-            landmarkName = "loadRecommendations(movie:)"
+            landmarkName = "loadDataTVShows()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -3,7 +3,7 @@
 //  Moviefy
 //
 //  Created by Nuno Gonçalves on 24/05/2020.
-//  Copyright © 2020 Liem Vo. All rights reserved.
+//  Copyright © 2020 Nuno Gonçalves All rights reserved.
 //
 
 import Foundation
