@@ -47,6 +47,7 @@
 		855D41E02439FB0E000BAE61 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DF2439FB0E000BAE61 /* TabBarController.swift */; };
 		855D50F92430A76B00903DFE /* Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D50F82430A76B00903DFE /* Wrap.swift */; };
 		855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */; };
+		855FAD1C24C97BAF003F942C /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855FAD1B24C97BAF003F942C /* NotificationsView.swift */; };
 		8560236D2426C98F00F028DA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8560236C2426C98F00F028DA /* SearchBar.swift */; };
 		85643AAE2438947600B94BC1 /* AnyGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85643AAD2438947600B94BC1 /* AnyGestureRecognizer.swift */; };
 		8564F1B9247A8F930080D923 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8564F1B8247A8F930080D923 /* VideoList.swift */; };
@@ -107,6 +108,8 @@
 		855D41DF2439FB0E000BAE61 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		855D50F82430A76B00903DFE /* Wrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrap.swift; sourceTree = "<group>"; };
 		855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapViewRepresentable.swift; sourceTree = "<group>"; };
+		855FAD1B24C97BAF003F942C /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		855FAD1D24C981D2003F942C /* Moviefy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moviefy.entitlements; sourceTree = "<group>"; };
 		8560236C2426C98F00F028DA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		85643AAD2438947600B94BC1 /* AnyGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyGestureRecognizer.swift; sourceTree = "<group>"; };
 		8564F1B8247A8F930080D923 /* VideoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoList.swift; sourceTree = "<group>"; };
@@ -155,6 +158,7 @@
 				850D5A11248A6FE300016B1F /* ShimmerView.swift */,
 				85BDF60E249D1536005362A0 /* MobileDataUsageView.swift */,
 				85BDF610249D157C005362A0 /* ThemesView.swift */,
+				855FAD1B24C97BAF003F942C /* NotificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +183,7 @@
 		44E5561A22D15E670000B95D /* Moviefy */ = {
 			isa = PBXGroup;
 			children = (
+				855FAD1D24C981D2003F942C /* Moviefy.entitlements */,
 				850D5A43248E2ACC00016B1F /* Services */,
 				85CE27E72488E6A100C2AB49 /* ViewModel */,
 				854C781624267CBE00BECFC2 /* Helpers */,
@@ -409,6 +414,7 @@
 				8564F1B9247A8F930080D923 /* VideoList.swift in Sources */,
 				855B1EE3242F61F1001F8F8B /* SectionCardView.swift in Sources */,
 				85CE27E92488E6BA00C2AB49 /* MovieListViewModel.swift in Sources */,
+				855FAD1C24C97BAF003F942C /* NotificationsView.swift in Sources */,
 				85643AAE2438947600B94BC1 /* AnyGestureRecognizer.swift in Sources */,
 				8560236D2426C98F00F028DA /* SearchBar.swift in Sources */,
 				44E5563122D15F3F0000B95D /* Movie.swift in Sources */,
@@ -572,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Moviefy/Moviefy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -593,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Moviefy/Moviefy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "";
