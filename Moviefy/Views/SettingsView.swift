@@ -17,9 +17,6 @@ struct SettingsView: View {
                     NavigationLink(destination: AboutView()){
                         Text("About")
                     }
-                    NavigationLink(destination: NotificationsView()) {
-                        Text("Notifications")
-                    }
                 }
                 Spacer()
                 Text("Version: \(UIApplication.shared.versionBuild)")
