@@ -4,6 +4,8 @@ Moviefy is a simple app built with SwiftUI + Combine that uses the TMDB API, you
 
 Inspired by Notflix: https://github.com/qeude/Notflix
 
+![](demo.gif)
+
 # Install
 
 xcodebuild -resolvePackageDependencies
