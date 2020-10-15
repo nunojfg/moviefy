@@ -15,12 +15,30 @@ struct ContentView : View {
     }
     
     var body: some View {
-        UITabView([
-            UITabView.Tab(view: DiscoverView(), title: "Discover", image: "play.fill"),
-            UITabView.Tab(view: SearchView(), title: "Search", image: "magnifyingglass.circle.fill"),
-            UITabView.Tab(view: FavoritesView(), title: "Favorites", image: "star.fill"),
-            UITabView.Tab(view: SettingsView(), title: "Settings", image: "line.horizontal.3.decrease.circle.fill")
-        ])
+        
+        TabView {
+            DiscoverView()
+                .tabItem {
+                    Image(systemName: "play.fill")
+                    Text("Discover")
+                }
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass.circle.fill")
+                    Text("Search")
+                }
+            FavoritesView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Favorites")
+                }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "line.horizontal.3.decrease.circle.fill")
+                    Text("Settings")
+                }
+        }
+        
     }
 }
 

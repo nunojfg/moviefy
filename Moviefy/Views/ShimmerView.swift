@@ -18,11 +18,13 @@ struct ShimmerView: View {
             .opacity(opacity)
             .transition(.opacity)
             .onAppear {
-                let baseAnimation = Animation.easeInOut(duration: 0.9)
-                let repeated = baseAnimation.repeatForever(autoreverses: true)
-                withAnimation(repeated) {
-                    self.opacity = 1
+                DispatchQueue.main.async {
+                    let baseAnimation = Animation.easeInOut(duration: 0.9)
+                    let repeated = baseAnimation.repeatForever(autoreverses: true)
+                    withAnimation(repeated) {
+                        self.opacity = 1
+                    }
                 }
-        }
+            }
     }
 }

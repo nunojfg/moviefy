@@ -24,7 +24,7 @@ struct SearchView: View {
                             NavigationLink(destination: MovieDetails(movie: movie)){
                                 MovieRow(movie: movie)
                             }
-                        }
+                        }.listRowBackground(Color.clear)
                     }
                 }
             }

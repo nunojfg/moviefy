@@ -43,7 +43,6 @@
 		855B858024390D8C0002BCA2 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B857F24390D8C0002BCA2 /* FavoritesView.swift */; };
 		855C1AD02479F6D900CD8960 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 855C1ACF2479F6D900CD8960 /* SDWebImageSwiftUI */; };
 		855D41DC2439E5F0000BAE61 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DB2439E5F0000BAE61 /* ShareSheet.swift */; };
-		855D41DE2439F738000BAE61 /* UITabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DD2439F738000BAE61 /* UITabView.swift */; };
 		855D41E02439FB0E000BAE61 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D41DF2439FB0E000BAE61 /* TabBarController.swift */; };
 		855D50F92430A76B00903DFE /* Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D50F82430A76B00903DFE /* Wrap.swift */; };
 		855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */; };
@@ -104,7 +103,6 @@
 		855B857D24390CBF0002BCA2 /* FavoriteMovieResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieResults.swift; sourceTree = "<group>"; };
 		855B857F24390D8C0002BCA2 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		855D41DB2439E5F0000BAE61 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
-		855D41DD2439F738000BAE61 /* UITabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabView.swift; sourceTree = "<group>"; };
 		855D41DF2439FB0E000BAE61 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		855D50F82430A76B00903DFE /* Wrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrap.swift; sourceTree = "<group>"; };
 		855D50FA2430CB3A00903DFE /* WrapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapViewRepresentable.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				85643AAD2438947600B94BC1 /* AnyGestureRecognizer.swift */,
 				855D41DB2439E5F0000BAE61 /* ShareSheet.swift */,
 				855D41DF2439FB0E000BAE61 /* TabBarController.swift */,
-				855D41DD2439F738000BAE61 /* UITabView.swift */,
 				856DF9492478726300347BE9 /* HorizontalMoviesView.swift */,
 				8564F1BC247A93CB0080D923 /* HorizontalVideosView.swift */,
 				850D5A57248EA62F00016B1F /* NetworkMonitor.swift */,
@@ -434,7 +431,6 @@
 				850D5A51248E2ACC00016B1F /* HTTPParameter.swift in Sources */,
 				85CE27E62488E5F200C2AB49 /* Actor.swift in Sources */,
 				8564F1BD247A93CB0080D923 /* HorizontalVideosView.swift in Sources */,
-				855D41DE2439F738000BAE61 /* UITabView.swift in Sources */,
 				855D50FB2430CB3A00903DFE /* WrapViewRepresentable.swift in Sources */,
 				850D5A50248E2ACC00016B1F /* APIClient.swift in Sources */,
 				855D41DC2439E5F0000BAE61 /* ShareSheet.swift in Sources */,
@@ -580,7 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Moviefy/Moviefy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C8ECT792GJ;
 				ENABLE_PREVIEWS = YES;
@@ -589,6 +585,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motionblink.moviefy;
 				PRODUCT_NAME = Moviefy;
 				SWIFT_VERSION = 5.0;
@@ -602,7 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Moviefy/Moviefy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = C8ECT792GJ;
 				ENABLE_PREVIEWS = YES;
@@ -611,6 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.motionblink.moviefy;
 				PRODUCT_NAME = Moviefy;
 				SWIFT_VERSION = 5.0;
